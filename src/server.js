@@ -39,6 +39,7 @@ app.use(express.urlencoded({ limit: "30mb", extended: true }))
 app.use('/assets', express.static(path.join(__dirname, '../public/assets')))
 app.use('/soocial', router)
 
+
 connectDB(async () => {
     app.listen(port, () => {
         console.log(`Server running on port: ${port}...`)

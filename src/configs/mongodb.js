@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
+import mongoose from 'mongoose'
+import dotenv from 'dotenv'
 dotenv.config()
 
 const USERNAME = process.env.USER_NAME
@@ -16,7 +16,7 @@ const connectDB = async server => {
             }
         )
         console.log(`Database running on: ${conn.connection.host}`)
-        await server()
+        server()
 
     } catch (error) {
         console.log(error)

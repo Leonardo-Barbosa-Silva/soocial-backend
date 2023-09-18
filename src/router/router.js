@@ -1,8 +1,8 @@
-import express from 'express';
+import express from 'express'
 import usersRoutes from './users/index.js'
 import postsRoutes from './posts/index.js'
 
-const router = express.Router();
+const router = express.Router()
 
 
 router.use('/v1/api/users', usersRoutes)

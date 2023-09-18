@@ -156,7 +156,7 @@ export default {
                     occupation: user.occupation,
                     viewedProfile: user.viewedProfile,
                     impressions: user.impressions
-                }
+                },
             })
 
         } catch (error) {
@@ -304,5 +304,5 @@ export default {
             console.log(error);
             res.status(500).json({ error: "Internal server error" });
         }
-    }
+    },
 }
