@@ -5,7 +5,9 @@ const multerStorage = multer.diskStorage({
         cb(null, "./public/assets")
     },
     filename: function (req, file, cb) {
-        cb(null, file.originalname)
+        const time = new Date().getTime()
+
+        cb(null, `${time}_${file.originalname}`)
     }
 })
 

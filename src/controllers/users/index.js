@@ -16,8 +16,6 @@ export default {
     // @route POST v1/api/users/auth/register
     // @access Public
     register: async (req, res) => {
-        console.log(req.body)
-        console.log(req.files)
         try {
             const {
                 firstName,
@@ -91,8 +89,6 @@ export default {
     //@route POST v1/api/users/auth/login
     //@access Public
     login: async (req, res) => {
-        console.log(req.body)
-        
         try {
             const { email, password } = req.body
 

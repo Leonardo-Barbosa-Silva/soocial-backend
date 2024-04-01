@@ -14,7 +14,7 @@ export default {
                 return res.status(400).json({ message: "User not authenticate" })
             }
             
-            const { description, picturePath, location } = req.body
+            const { description, picturePath } = req.body
 
             if (!description && !picturePath) {
                 return res.status(400).json({ message: "Data not send" })
@@ -24,7 +24,7 @@ export default {
                 author: user._id,
                 firstName: user.firstName,
                 lastName: user.lastName,
-                location,
+                location: user.location,
                 description,
                 userPicturePath: user.picturePath,
                 picturePath,
